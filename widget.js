@@ -22,7 +22,9 @@ window.addEventListener("onWidgetLoad", function (obj) {
     window.addEventListener("onEventReceived", function (wobj) {
       if (wobj.detail.listener === "follower-latest") {
         const username = wobj.detail.event.name;
-        const blackList = fieldData.terms.split(",");
+        const blackList = fieldData.terms
+          .split(",")
+          .map((string) => string.trim());
         if (blackList.find((term) => username.includes(term))) {
           client.ban(channel, username, "bot safado");
         }
