@@ -1,0 +1,10 @@
+{
+  "token": {
+    "type": "text",
+    "label": "token"
+  },
+  "terms": {
+    "type": "text",
+    "label": "Termos banidos (separados por \",\" )"
+  }
+}
